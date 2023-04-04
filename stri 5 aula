@@ -1,0 +1,18 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	var s1 string
+	var X int
+	fmt.Println("Digite a sua string:", s1)
+	fmt.Scanln(&s1)
+	fmt.Println("Escreva seu numero:", X)
+	fmt.Scanln(&X)
+
+	str := strings.ToUpper(s1)
+	
+}
