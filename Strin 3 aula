@@ -1,0 +1,18 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	var stri, car string
+	fmt.Println("qual é a sua string:", stri)
+	fmt.Scan(&stri)
+	fmt.Print("Escreva um caractere:", car)
+	fmt.Scan(&car)
+
+	carac := strings.Count(stri, car)
+	fmt.Println(carac)
+
+}
