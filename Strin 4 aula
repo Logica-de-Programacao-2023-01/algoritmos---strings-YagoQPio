@@ -1,0 +1,16 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	var stri string
+	fmt.Println("qual é a sua string:", stri)
+	fmt.Scan(&stri)
+
+	maius := strings.ToUpper(stri)
+	fmt.Print(maius)
+
+}
