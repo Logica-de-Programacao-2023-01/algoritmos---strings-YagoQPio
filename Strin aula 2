@@ -1,0 +1,11 @@
+package main
+
+import "fmt"
+
+func main() {
+	var s1 string
+	fmt.Println("Digite a sua palavra", s1)
+	fmt.Scan(&s1)
+
+	fmt.Println("tamanho é:", len(s1))
+}
