@@ -1,0 +1,16 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	var esp string
+
+	fmt.Println("Digite uma string:")
+	fmt.Scanln(&esp)
+
+	output := strings.ReplaceAll(esp, " ", "")
+
+	fmt.Println("A string sem espaços em branco é:", output)
