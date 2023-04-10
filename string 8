@@ -1,0 +1,20 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	var s1 string
+
+	fmt.Println("Digite uma string:")
+	fmt.Scanln(&s1)
+
+	reverse := ""
+
+	for _, char := range s1 {
+		reverse = string(char) + reverse
+	}
+
+	fmt.Printf("A string invertida é: %s\n", reverse)
+}
