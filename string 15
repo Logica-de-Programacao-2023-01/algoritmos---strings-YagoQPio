@@ -1,0 +1,24 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	var input string
+
+	fmt.Println("Digite uma string:")
+	fmt.Scanln(&input)
+
+	result := strings.Map(func(r rune) rune {
+		switch r {
+		case 'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U':
+			return '*'
+		default:
+			return r
+		}
+	}, input)
+
+	fmt.Println("String resultante:", result)
+}
