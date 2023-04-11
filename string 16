@@ -1,0 +1,22 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	var s1, s2 string
+
+	fmt.Println("Digite a primeira string:")
+	fmt.Scanln(&s1)
+
+	fmt.Println("Digite a segunda string:")
+	fmt.Scanln(&s2)
+
+	if strings.Contains(s1, s2) {
+		fmt.Printf("%s é uma substring de %s\n", s2, s1)
+	} else {
+		fmt.Printf("%s não é uma substring de %s\n", s2, s1)
+	}
+}
