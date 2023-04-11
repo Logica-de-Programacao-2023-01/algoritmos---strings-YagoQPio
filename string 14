@@ -1,0 +1,38 @@
+package main
+
+import (
+	"fmt"
+	"strconv"
+)
+
+func main() {
+	var s1 string
+
+	fmt.Println("Digite uma sequência numérica:")
+	fmt.Scanln(&s1)
+
+	// Verifica se a sequência é decrescente
+	if isDescending(s1) {
+		fmt.Println("A sequência é numérica decrescente!")
+	} else {
+		fmt.Println("A sequência não é numérica decrescente.")
+	}
+}
+
+func isDescending(s string) bool {
+	if len(s) <= 1 {
+		return true
+	}
+
+	prev, _ := strconv.Atoi(string(s[0]))
+
+	for i := 1; i < len(s); i++ {
+		curr, _ := strconv.Atoi(string(s[i]))
+		if curr >= prev {
+			return false
+		}
+		prev = curr
+	}
+
+	return true
+}
