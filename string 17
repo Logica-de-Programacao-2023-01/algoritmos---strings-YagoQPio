@@ -1,0 +1,24 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	var str1 string
+
+	fmt.Println("Digite uma string:")
+	fmt.Scanln(&str1)
+
+	countMap := make(map[rune]int)
+	for _, char := range str1 {
+		countMap[char]++
+	}
+
+	fmt.Println("Letras únicas:")
+	for _, char := range str1 {
+		if countMap[char] == 1 {
+			fmt.Printf("%c ", char)
+		}
+	}
+}
